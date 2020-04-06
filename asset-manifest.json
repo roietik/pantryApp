@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/pantryApp/static/js/main.56f7b9e1.chunk.js",
-    "main.js.map": "/pantryApp/static/js/main.56f7b9e1.chunk.js.map",
+    "main.js": "/pantryApp/static/js/main.72769b2b.chunk.js",
+    "main.js.map": "/pantryApp/static/js/main.72769b2b.chunk.js.map",
     "runtime-main.js": "/pantryApp/static/js/runtime-main.0c0dbb6a.js",
     "runtime-main.js.map": "/pantryApp/static/js/runtime-main.0c0dbb6a.js.map",
     "static/js/2.c95c5988.chunk.js": "/pantryApp/static/js/2.c95c5988.chunk.js",
     "static/js/2.c95c5988.chunk.js.map": "/pantryApp/static/js/2.c95c5988.chunk.js.map",
     "index.html": "/pantryApp/index.html",
-    "precache-manifest.445b5d5e374e6100f46bd8a1b843aaef.js": "/pantryApp/precache-manifest.445b5d5e374e6100f46bd8a1b843aaef.js",
+    "precache-manifest.80b48c9a9f868420e6ffa92e9accc906.js": "/pantryApp/precache-manifest.80b48c9a9f868420e6ffa92e9accc906.js",
     "service-worker.js": "/pantryApp/service-worker.js",
     "static/js/2.c95c5988.chunk.js.LICENSE.txt": "/pantryApp/static/js/2.c95c5988.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0c0dbb6a.js",
     "static/js/2.c95c5988.chunk.js",
-    "static/js/main.56f7b9e1.chunk.js"
+    "static/js/main.72769b2b.chunk.js"
   ]
 }
