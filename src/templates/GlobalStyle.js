@@ -1,0 +1,47 @@
+import { createGlobalStyle } from 'styled-components';
+
+const Main = createGlobalStyle`
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  html {
+    font-size: 62.5%; 
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+  }
+  li {
+    list-style: none;
+  }
+  div {
+    margin: 0;
+    padding: 0;
+  }
+
+  button, a {
+  display: inline-block;
+  appearance: none;
+  margin: 10px 0;
+  padding: 0px;
+  height: 50px;
+  border-width: 0;
+  color: #000;
+  font-family: sans-serif;
+  text-decoration: none;
+  line-height: 22px;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+`;
+
+export default Main;
