@@ -55,11 +55,10 @@ class DeletePage extends Component {
 
     switch (match.path) {
       case routes.pantryDelete:
-        this.setState({ page: routes.pantryDelete, item: pantryRes });
+        this.setState({ item: pantryRes });
         break;
       case routes.shoppingListDelete:
         this.setState({
-          page: routes.shoppingListDelete,
           item: limitedRes,
         });
         break;
@@ -69,7 +68,7 @@ class DeletePage extends Component {
   }
 
   render() {
-    const { page, item, limitedRes } = this.state;
+    const { item, limitedRes } = this.state;
     const { match, removeItem } = this.props;
 
     return (
@@ -79,7 +78,6 @@ class DeletePage extends Component {
             <Icon icon={faTrashAlt} size="1x" />
             Delete Item
           </HeaderTitle>
-          <p>{page}</p>
           {match.path === routes.shoppingListDelete ? (
             <>
               <pre>
@@ -89,7 +87,7 @@ class DeletePage extends Component {
                 Confirm
               </Trigger>
               <Trigger as={Link} to="/shopping-list" secondary={1}>
-                Cancle
+                Cancel
               </Trigger>
             </>
           ) : (
@@ -101,7 +99,7 @@ class DeletePage extends Component {
                 Confirm
               </Trigger>
               <Trigger as={Link} to="/pantry" secondary={1}>
-                Cancle
+                Cancel
               </Trigger>
             </>
           )}
