@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "31f1adc802618e942a73ed876e9111b5",
+    "revision": "b4bc8dd9ad8c8b290b6bc28018ab2b12",
     "url": "/pantryApp/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pantryApp/static/js/2.c95c5988.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6cc706192abc82b28e57",
-    "url": "/pantryApp/static/js/main.72769b2b.chunk.js"
+    "revision": "54905e67229fc821e24d",
+    "url": "/pantryApp/static/js/main.8955f373.chunk.js"
   },
   {
     "revision": "5a82994afab9eed801de",
