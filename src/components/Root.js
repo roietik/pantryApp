@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { HashRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { routes } from 'routes';
 import store from 'store';
 import MainTemplate from 'templates/MainTemplate';
@@ -15,7 +15,7 @@ const App = () => {
   return (
     <>
       <Provider store={store}>
-        <BrowserRouter>
+        <HashRouter>
           <MainTemplate>
             <Switch>
               <Route exact path={routes.home} render={() => <Redirect to={routes.pantry} />} />
@@ -29,7 +29,7 @@ const App = () => {
               <Route exact path={routes.add} component={AddPage} />
             </Switch>
           </MainTemplate>
-        </BrowserRouter>
+        </HashRouter>
       </Provider>
     </>
   );
