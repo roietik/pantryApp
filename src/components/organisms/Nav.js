@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faThList } from '@fortawesome/free-solid-svg-icons';
 
 const MenuWrapper = styled.div`
+  max-height: 90px;
   max-width: 1024px;
   margin: 0 auto;
   background-color: #ffd82b;
@@ -17,7 +18,7 @@ const MenuWrapper = styled.div`
   width: 100%;
   top: 0;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 185px auto 50px;
 `;
 
 const Icon = styled(FontAwesomeIcon)`
@@ -30,7 +31,10 @@ const HeaderTitle = styled.h2`
 `;
 
 const Menu = styled.div`
-  align-self: center;
+  @media (max-width: 580px) {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 `;
 
 const Item = styled(Param)`
@@ -38,6 +42,12 @@ const Item = styled(Param)`
   color: black;
   &:first-child {
     padding-left: 0;
+  }
+  @media (max-width: 580px) {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    line-height: 20px;
   }
 `;
 

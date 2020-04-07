@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const CrudWrapper = styled.div`
   max-width: 600px;
-  padding: 0;
+  padding: 0 20px;
   margin: 0 auto;
   margin-top: 96px;
 `;

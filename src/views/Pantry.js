@@ -1,12 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import MainList from 'components/molecules/MainList';
+import Select from 'components/atoms/Select/Select';
+
 import PropTypes from 'prop-types';
 
 const Pantry = ({ data }) => {
   return (
     <>
       <MainList data={data} page="pantry" />
+      <Select />
     </>
   );
 };

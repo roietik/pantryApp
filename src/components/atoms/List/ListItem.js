@@ -10,6 +10,11 @@ const ListItem = styled.li`
   padding: ${remCalc(10)} ${remCalc(20)};
   transition: background-color 0.2s;
   transition: border-color 0.2s;
+  @media (max-width: 999px) {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: inherit;
+  }
 
   &:hover {
     background-color: #f1f1f1;
