@@ -28,7 +28,7 @@ const Trigger = styled(Button)`
 const MainList = ({ data, page }) => (
   <ListWrapper>
     {data.map((item, index) => {
-      const { name, quantity, category, limit } = item;
+      const { name, quantity, category, limit, j } = item;
       return (
         <ListItem key={name}>
           <Param className="red">
@@ -38,6 +38,7 @@ const MainList = ({ data, page }) => (
           <Param>
             <strong> Quantity: </strong>
             {quantity}
+            {j}
           </Param>
           <Param>
             <strong> Category: </strong>
@@ -46,6 +47,7 @@ const MainList = ({ data, page }) => (
           <Param>
             <strong> Limit: </strong>
             {limit}
+            {j}
           </Param>
           <Action>
             <Trigger

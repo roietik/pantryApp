@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 import { addItem as addItemAction } from 'actions';
 import { Redirect, Link } from 'react-router-dom';
 import { Formik, Form } from 'formik';
+import Select from 'components/atoms/Select/Select';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faFolderPlus } from '@fortawesome/free-solid-svg-icons';
 
@@ -84,7 +85,7 @@ class AddPage extends Component {
             Add Item
           </HeaderTitle>
           <Formik
-            initialValues={{ name: '', quantity: '', category: '', limit: '' }}
+            initialValues={{ name: '', quantity: '', category: '', limit: '', j: '' }}
             onSubmit={(values, { setSubmitting }) => {
               addItem(values);
               setSubmitting(false);
@@ -129,6 +130,12 @@ class AddPage extends Component {
                   value={values.limit}
                   required
                 />
+                <Select
+                  name="j"
+                  values={values.j}
+                  handleChange={handleChange}
+                  handleBlur={handleBlur}
+                />
                 <SubmitWrapper>
                   <Back to="/">
                     <FontAwesomeIcon icon={faArrowLeft} size="2x" />
@@ -140,8 +147,6 @@ class AddPage extends Component {
               </FormWrapper>
             )}
           </Formik>
-
-          <br />
         </Center>
       </>
     );

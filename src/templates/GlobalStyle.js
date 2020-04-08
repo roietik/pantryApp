@@ -21,6 +21,15 @@ const Main = createGlobalStyle`
   li {
     list-style: none;
   }
+  select {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
   div {
     margin: 0;
     padding: 0;
@@ -41,7 +50,6 @@ const Main = createGlobalStyle`
   cursor: pointer;
 
 }
-
 `;
 
 export default Main;

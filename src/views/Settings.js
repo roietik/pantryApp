@@ -16,9 +16,11 @@ const HeaderTitle = styled.h2`
 
 const Settings = () => {
   return (
-    <HeaderTitle>
-      <Icon icon={faCogs} size="1x" /> Settings
-    </HeaderTitle>
+    <>
+      <HeaderTitle>
+        <Icon icon={faCogs} size="1x" /> Settings
+      </HeaderTitle>
+    </>
   );
 };
 

@@ -18,3 +18,10 @@ export const editItem = (item) => {
     payload: item,
   };
 };
+
+export const changeNotification = (notification) => {
+  return {
+    type: 'NOTIFICATION',
+    payload: notification,
+  };
+};

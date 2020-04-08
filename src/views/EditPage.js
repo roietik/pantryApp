@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { Formik, Form } from 'formik';
 import styled from 'styled-components';
 import Input from 'components/atoms/Input/Input';
+import Select from 'components/atoms/Select/Select';
 import Button from 'components/atoms/Button/Button';
 import { editItem as editItemAction } from 'actions';
 import { Redirect, Link } from 'react-router-dom';
@@ -62,16 +63,16 @@ const Hiden = styled(InputAddItem)`
 
 class EditPage extends Component {
   state = {
-    item: ['here'],
-    limited: 'here',
-    limitedRes: 'here',
+    item: [''],
+    limited: '',
+    limitedRes: '',
     redirectToPantry: false,
   };
 
   componentDidMount() {
     const { match, data } = this.props;
     const [pantryRes] = data.filter((item) => Number(item.id) === Number(match.params.id));
-    const limited = data.filter((item) => item.quantity < item.limit / 2);
+    const limited = data.filter((item) => Number(item.quantity) < Number(item.limit) / 2);
     this.setState(
       {
         limited,
@@ -109,17 +110,19 @@ class EditPage extends Component {
       res = {
         id: limitedRes.id,
         name: limitedRes.name,
-        quantity: limitedRes.quantity,
+        quantity: Number(limitedRes.quantity),
         category: limitedRes.category,
-        limit: limitedRes.limit,
+        limit: Number(limitedRes.limit),
+        j: limitedRes.j,
       };
     } else {
       res = {
         id: item.id,
         name: item.name,
-        quantity: item.quantity,
+        quantity: Number(item.quantity),
         category: item.category,
-        limit: item.limit,
+        limit: Number(item.limit),
+        j: item.j,
       };
     }
     return res;
@@ -196,6 +199,12 @@ class EditPage extends Component {
                   value={values.limit || ''}
                   required
                 />
+                <Select
+                  name="j"
+                  values={values.j}
+                  handleChange={handleChange}
+                  handleBlur={handleBlur}
+                />
                 <SubmitWrapper>
                   <Back to="/">
                     <FontAwesomeIcon icon={faArrowLeft} size="2x" />
@@ -222,8 +231,8 @@ EditPage.propTypes = {
   }).isRequired,
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      name: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-      quantity: PropTypes.number,
+      name: PropTypes.string,
+      quantity: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
       category: PropTypes.string,
       limit: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     }),

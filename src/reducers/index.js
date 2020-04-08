@@ -21,6 +21,11 @@ const rootReducer = (state = Init, { type, payload }) => {
         ...state,
         data: [...state.data.map((item, idx) => (idx === payload.id ? payload : item))],
       };
+    case 'NOTIFICATION':
+      return {
+        ...state,
+        notification: payload,
+      };
 
     default:
       return state;
