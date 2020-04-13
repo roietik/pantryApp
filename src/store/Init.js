@@ -20,7 +20,7 @@ const Init = {
     { id: 17, name: 'marchew', quantity: 43, category: 'vegetables', limit: 40, j: 'kg' },
     { id: 18, name: 'ogórki', quantity: 15, category: 'vegetables', limit: 40, j: 'kg' },
   ],
-  notification: { isOpen: true, day: 3 },
+  notification: { isOpen: true, day: 1 },
 };
 
 export default Init;

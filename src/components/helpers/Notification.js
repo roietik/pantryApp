@@ -18,26 +18,30 @@ const Alert = styled.div`
 `;
 
 class Notification extends Component {
+  state = {
+    today: new Date(),
+  };
+
   componentDidMount() {
     setInterval(() => {
       const { changeNotification, notification } = this.props;
-      const date = new Date();
+      const monday = 1;
 
-      if (date.getDay() === notification.day) {
+      if (monday === notification.day) {
         changeNotification({ isOpen: true, day: notification.day });
+      } else {
+        changeNotification({ isOpen: false, day: notification.day });
       }
-    }, 300000);
+    }, 5000);
   }
 
   pushNotification = () => {
     const { changeNotification } = this.props;
-
-    const today = new Date();
+    const { today } = this.state;
     const tomorrow = new Date(today);
     const newDay = tomorrow.setDate(tomorrow.getDate() + 3);
     const update = new Date(newDay);
     const res = update.getDay();
-
     changeNotification({ isOpen: false, day: res });
   };
 
